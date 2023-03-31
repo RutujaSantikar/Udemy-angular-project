@@ -1,2 +1,25 @@
 <h3>hello {{ name }} your id is :{{ id }}</h3>
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add server</button>
+<label for="">Server Name</label>
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)">
+ -->
+  <input type="text" class="form-control" [(ngModel)]="serverName">
+ 
+<!-- <p>{{serverName}}</p> -->
+<br>
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+>
+  Add server
+</button>
+<p>{{ serverCreationStatus }}</p>
+
+
+
+<!-- assignment -->
+<input type="text" class="form-control" [(ngModel)]="username" >
+<p>{{username}}</p>
+<button class="btn btn-primary" (click)="onclick()"
+ [disabled]="username == '' "
+>Button</button>
