@@ -14,8 +14,10 @@
   Add server
 </button>
 <p>{{ serverCreationStatus }}</p>
+<p *ngIf="serverCreated">Server was creted, server name is {{serverName}}</p>
+<p else="!serverCreated">No, server was created </p>
 
-
+<li *ngFor="let server of servers">{{server}}</li>
 
 <!-- assignment -->
 <input type="text" class="form-control" [(ngModel)]="username" >
